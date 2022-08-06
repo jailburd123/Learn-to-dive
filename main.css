@@ -22,6 +22,10 @@ body{
     padding: 0;
     background-color: #3A3A3A;
     overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    left: 0;
 }
 
 #navbar>nav>ul>li{
@@ -39,6 +43,9 @@ body{
 
 
 /* title */
+.h1title{
+    margin-top: 6rem;
+}
 
 .h1title>h1{
     text-align: center;

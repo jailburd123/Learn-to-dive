@@ -1,9 +1,9 @@
-
+/* global */
 *{
  font-family: 'Times New Roman', Arial, sans-serif;   
 }
 
-
+/* navbar */
 #navbar>nav>ul>li>a{
     text-decoration: none;
     color: #00ffff;
@@ -18,15 +18,22 @@ ul{
     color: #ff0000;
 }
 
+
+/* title */
+
 .h1title>h1{
     text-align: center;
 }
 
+/* factset */
 
 section{
     margin: 0 5rem 0 5rem;  
     border-bottom: 2px solid #00ffff;
 }
+
+
+/* legal */
 
 #legal{
     font-size: 1.25rem;

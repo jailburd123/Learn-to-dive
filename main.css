@@ -16,6 +16,11 @@ body{
     display: block;
 }
 
+/* Make the ul position fixed */
+/* Make the ul  top = 0*/
+/* make the width of the UL take up 100% of the available page */
+/* give the left 0  */
+
 #navbar>nav>ul{
     list-style-type:none;
     margin: 0;
@@ -39,6 +44,10 @@ body{
 
 
 /* title */
+
+/* our h1 will hide behind our fixed navbar so lets give it some margin */
+
+/* let's give it a margin on top of  96px or 6rem*/
 
 .h1title>h1{
     text-align: center;

@@ -1,0 +1,43 @@
+
+*{
+ font-family: 'Times New Roman', Arial, sans-serif;   
+}
+
+
+#navbar>nav>ul>li>a{
+    text-decoration: none;
+    color: #00ffff;
+}
+
+ul{
+    list-style-type:none;
+}
+
+
+#navbar>nav>ul>li>a:hover{
+    color: #ff0000;
+}
+
+.h1title>h1{
+    text-align: center;
+}
+
+
+section{
+    margin: 0 5rem 0 5rem;  
+    border-bottom: 2px solid #00ffff;
+}
+
+#legal{
+    font-size: 1.25rem;
+}
+
+#legal>footer>ul>li>a{
+    text-decoration: none;
+    color: #00ffff;
+}
+
+#legal>footer>ul>li>a:hover{
+    text-decoration: none;
+    color: #ff0000;
+}

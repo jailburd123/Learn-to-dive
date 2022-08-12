@@ -5,12 +5,13 @@
 
 body{
     background-color: #f1f1f1;
+    display: flex;
+    flex-direction: column;
 }
 
 
 /* 
 How to Stretch Full-Width Using Only CSS
-Here’s how I accomplished this.  I have CSS applied to the class name, .align-full , which is actually what WordPress Gutenberg (block editor) uses when you click the Full Width button on a block that supports it.
 
 What the first part does is set both the width and max-width to 100vw.  “vw” is a CSS unit of measurement that is a percentage of the viewport width.  So, 100vw is 100% of the viewport width (aka, the browser window).
 
@@ -22,6 +23,20 @@ The second part uses calc() to calculate half of the width of the container minu
     max-width: 100vw;
     margin-left: calc(50% - 50.45vw);
 }
+
+
+
+.textLeft{
+    position: relative;
+    margin: auto;
+}
+
+
+.imgResize{
+    height: 500px;
+    width: 300px;
+}
+
 
 /* navbar */
 #navbar>nav>ul>li>a{
@@ -80,13 +95,62 @@ The second part uses calc() to calculate half of the width of the container minu
 
 /* factset */
 
+h2{
+    /* text-align: center; */
+    font-size: 28pt;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
 section{
     margin: 0 5rem 0 5rem;  
     border-bottom: 2px solid #00ffff;
 }
 
+.article-thumb-left{
+    float: left;
+}
 
+/* container */
+.article-container {
+    /* margin: 20px 20px 0 0;   */
+    margin: 3rem 20px 3rem 0;  
+    /*border: 5px solid #333; */
+    overflow: auto
+}
+.article-thumb-right {
+    float: right;
+}
+.article-thumb img {
+    display: block
+}
+.article-content {
+    margin-left: 210px
+}
+.article-title {
+    font-weight: bold;
+    font-size: 200%
+}
 
+.article-content>p{
+    color: dodgerblue;
+    font-size: 20pt;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#sourcedLink{
+    text-decoration: none;
+
+}
+#sourcedLink:hover{
+    text-decoration: none;
+    color: #880808 !important;
+    
+}
+#sourcedLink:visited{
+    text-decoration: none;
+    color: #50C878;
+    
+}
 
 /* legal */
 
@@ -103,3 +167,7 @@ section{
     text-decoration: none;
     color: #ff0000;
 }
+
+
+
+

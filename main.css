@@ -35,6 +35,7 @@ The second part uses calc() to calculate half of the width of the container minu
 .imgResize{
     height: 500px;
     width: 300px;
+    padding: 25px;
 }
 
 

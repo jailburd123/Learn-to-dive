@@ -190,7 +190,7 @@ section:nth-child(4){
 }
 
 footer{
-    
+    margin-top: auto;
 }
 
 .footer-container{
@@ -234,3 +234,61 @@ footer{
 .footer-right>h4{
     color: #f1f1f1;
 }
+
+.weatherData{
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.weatherData>.article-content>.article-title{
+    text-align: center !important;
+}
+
+.weatherData>.article-content>.article-title>form{
+    text-align: center;
+}
+
+#WeatherForm{
+    justify-content: center;
+    text-align: center;
+}
+
+#WeatherForm>input{
+    width: 50rem;
+    height: 2rem;
+    border: 3px solid #3A3A3A;
+    border-radius: .75rem;
+}
+
+#weatherTable {
+    margin-top: 2rem;
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+  
+  #weatherTable td, #weatherTable th {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  #weatherTable tr:nth-child(even){background-color: #f2f2f2;}
+  
+  #weatherTable tr:hover {background-color: #ddd;}
+  
+  #weatherTable th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: dodgerblue;
+    color: white;
+  }
+
+  .button{
+    font-size: 13pt;
+    color: #f1f1f1;
+    background-color: dodgerblue;
+    height: 2.5rem;
+    border-radius: .75rem;
+  }

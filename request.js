@@ -1,26 +1,11 @@
-
-
-// set two variables to 5 and 6
-
-let numb1 = 5;
-let numb2 = 6;
-let hello = 'Hello World!';
-
-console.log(numb1);
-console.log(numb2);
-
-console.log(numb1 + numb2);
-console.log(hello);
-console.log(hello + numb1);
+// const { get } = require("request");
 
 
 
 
 let convertToFariheit = (data) => {
-
     let toF = ((data - 273.15) * 9/ 5) + 32;
-
-    console.log("new temp: ", toF);
+    console.log("new temp: ", toF);    
     return toF;
     
 }
@@ -30,13 +15,12 @@ let cardinalDirection = (data) => {
     var val = Math.floor((data / 22.5) + 0.5);
     var arr = ["N", "NNE", "NE", "ENE", "E", "ESE", "SE", "SSE", "S", "SSW", "SW", "WSW", "W", "WNW", "NW", "NNW"];
     let direction = arr[(val % 16)];
-    console.log(direction);
     return direction;
 
 }   
 
-  
-let weatherurl = 'https://api.openweathermap.org/data/2.5/weather?q=Omaha&APPID=fe2e25be076abfb7b948ebb4743d71d2';
+let query = `London`;  
+let weatherurl = `https://api.openweathermap.org/data/2.5/weather?q=${query}&APPID=fe2e25be076abfb7b948ebb4743d71d2`;
 
 
 let getWeather = () => {
@@ -48,25 +32,61 @@ let getWeather = () => {
                 return Promise.reject(response);
             }
         }).then((data) => {
+            
+            //log what comes back 
             console.log(data);
-            let cityName = data.name;
-            console.log("city Name: ", cityName);
+
+            //variables 
             let country = data.sys.country;
-            console.log("country: ", country);
+            let cityName = data.name;
             let humidity = data.main['humidity'];
-            console.log("humidity: ", humidity);
             let temp = data.main['temp'];
-            console.log("temp: ", temp);
             let weatherdesc = data.weather[0].description;
-            console.log("description: ", weatherdesc);
-            let windSpeed = data.wind['speed'];
-            console.log('Wind Speed: ', windSpeed);
+            let windSpeed = Math.round(data.wind['speed']);
             let windDirection = data.wind['deg'];
-            console.log('Wind direction: ', windDirection);
+            let direction = cardinalDirection(windDirection);
+            let tempChange = Math.round(convertToFariheit(temp));
+
+            // log our varaiables
+            console.log("humidity: ", humidity);
+            console.log("city Name: ", cityName);
+            console.log("country: ", country);
+            console.log("temp: ", temp);
+            console.log("description: ", weatherdesc);
+            console.log('Wind Speed: ', windSpeed);
+            console.log('Wind direction: ', windDirection);            
+            console.log('Converted Temp: ', tempChange);            
+            console.log('Wind Direction: ', direction);
 
 
-            convertToFariheit(temp);
-            cardinalDirection(windDirection);
+            //write to our table
+            let tableData = document.querySelector('#weatherTable').innerHTML;
+
+            
+            console.log('tableData querySelector: ', tableData);
+            console.log('button: ', getWeatherButton);
+
+
+        //     <tr>
+        //     <th>Location Name</th>
+        //     <th>humidity</th>
+        //     <th>Temperature</th>
+        //     <th>Wind Speed</th>
+        //     <th>Wind Direction</th>
+        //     <th>Description</th>
+        //   </tr>
+          
+          
+        //   <tr>
+        //       <td>Omaha, Ne</td>
+        //       <td>75%</td>
+        //       <td>73%</td>
+        //       <td>3.6 MPH</td>
+        //       <td>W</td>
+        //       <td>Overcast Clouds</td>
+        //   </tr>
+
+
 
     })
         .catch((error) =>{
@@ -77,4 +97,10 @@ let getWeather = () => {
 
 };
 
+let getWeatherButton = document.querySelector('button');
+
+getWeatherButton.addEventListener("click", getWeather());
+
 getWeather();
+
+

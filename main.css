@@ -82,9 +82,34 @@ section{
     margin: 0 5rem 0 5rem;  
     border-bottom: 2px solid #00ffff;
 }
+.article-container{
+    margin: 3rem 20px 3rem 0;
+    overflow: auto; 
+}
+.article-thumb-left{
+    float: left;
+}
+.article-thumb-right{
+    float: right;
+}
+.article-content{
+    margin-left: 210px;
+}
+.article-title{
+    font-weight: bold;
+    font-size: 200% 
+}
+.article-content>p{
+    color: dodgerblue;  
+    font-size: 15pt;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
 
-
-
+.imgResize{
+    height: 500px;
+    width: 300px;
+    padding: 25px;
+}
 
 /* legal */
 

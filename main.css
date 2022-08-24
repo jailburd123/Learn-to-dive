@@ -119,6 +119,20 @@ section{
     padding: 25px;
 }
 
+#sourcedLink{
+    text-decoration: none;
+}
+
+#sourcedLink:hover{
+    text-decoration: none;
+    color: #880808;
+}
+
+#sourcedLink:visited{
+    text-decoration: none;
+    /* color: #50C878; */
+}
+
 /* legal */
 
 #legal{

@@ -10,7 +10,8 @@
     padding-left: 0;
   }
   footer {
-    background-color: #555;
+    border-top: 3px solid #333333;
+    background-color: dodgerblue;
     color: #bbb;
     line-height: 1.5;
   }
@@ -56,6 +57,9 @@
     padding: 1.25rem;
     min-width: 12.5rem;
   }
+  .ft-main-item>#mailTo{
+    list-style-type: none;
+  }
   
   /* Footer main | Newsletter form */
   form {
@@ -68,10 +72,11 @@
     margin-top: 0.3125rem;
   }
   input[type="submit"] {
-    background-color: #00d188;
+    background-color: dodgerblue;
+    border: 1px solid #ffffff;
     color: #fff;
     cursor: pointer;
-    border: 0;
+    margin-left: 1rem;
     padding: 0.625rem 0.9375rem;
     margin-top: 0.3125rem;
   }
@@ -89,21 +94,7 @@
     margin: 0.5rem;
     font-size: 1.25rem;
   }
-  /* Footer legal */
-  .ft-legal {
-    padding: 0.9375rem 1.875rem;
-    background-color: #333;
-  }
-  .ft-legal-list {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-  }
-  .ft-legal-list li {
-    margin: 0.125rem 0.625rem;
-    white-space: nowrap;
-  }
-  /* one before the last child */
-  .ft-legal-list li:nth-last-child(2) {
-      flex: 1;
-  }
+
+.ft-social-list li>a:hover {
+ color: orange;
+}

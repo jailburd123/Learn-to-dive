@@ -132,17 +132,29 @@
                 <h2 class="article-title">
                     What is the weather like where we are diving?
                 </h2>
-                <p>
-                    <form action="submit" method="get" id="WeatherForm">
-                        <label for="data"></label>
-                        <input type="text" id="data" placeholder="Enter your City,State/Country here..."> <span><button class="button">Search</button></span>
-                    </form>
-                    <table id="weatherTable">
-                      </table>
+                            <div class="whereTo">
+                                <label for="data"></label>
+                                <input type="text" id="data" placeholder="Enter your City,State/Country here..."> <span><button class="button" onclick="getWeatherDataValue()">Search</button></span>
+                                <table id="weatherTable">
+                                    <tr>
+                                        <th>City</th>
+                                        <th>State/Country</th>
+                                        <th>Temperature</th>
+                                        <th>description</th>
+                                        <th>Wind Speed</th>
+                                        <th>Wind Direction</th>
+                                        <th>Humidity</th>
+                                    </tr>
+                                    <tr id="dataEntry">
+
+                                    </tr>
+                                </table>
+                            </div>
+
 
 
                       
-                </p>
+
             </div>
         </div>
             </article>
@@ -169,62 +181,45 @@
 
 
     <!-- footer -->
-<!-- 
-    <div class="footer-container">
-    <div id="legal">
-        <footer>
 
+    <div class="container"></div>
+    <footer>
+        <!-- Footer main -->
+        <section class="ft-main">
+            <div class="ft-main-item">
+                <h2 class="ft-title">Contact Info</h2>
+                <ul>
+                    <li>&copy; 2022</li>
+                    <li>Joshua Burden</li>
+                    <li>AIM Institute</li>
+                    <li><a id="mailTo" href="mailto:jburden@aimcodeschool.org">Email Me</a></li>
+                </ul>
+            </div>
 
-            <ul class="flex-container">
-                <li class=" footer-left flex-item">
-                    <ul>
-                        <li>&copy; 2022</li>
-                        <li>Joshua Burden</li>
-                        <li>Aim Institute</li>
-                        <li><a href="mailto:jburden@aimcodeschool.org">Email me</a></li>
-                    </ul>
-                    
-                    
-                  
-                    
-                </li>
-                <li class="flex-item flex-center">
-                    <div class="footer-center flex-item">
-                        <form action="" method="get">
-                            <label for="text">Subscribe</label>
-                            <input type="text">
-                            <button class="submit">Submit</button>
-                        </form>
-                    </div>
-                </li>
-                <li class="flex-item">
-                    <div class="footer-right flex-item">
-                        <ul>
-                            <li>Social: </li>
-                            <br>
-                            <li><a href="https://twitter.com" target="_blank"><i class="fa-brands fa-square-twitter"></i></a></li>
-                            <li><a href="https://facebook.com" target="_blank"><i class="fa-brands fa-square-facebook"></i></a></li>
-                            <li><a href="https://linkedin.com" target="_blank"><i class="fa-brands fa-linkedin"></i></a></li>
-                            <li><a href="https://instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>    
-                        </ul>
-                    </div>
+            <div class="ft-main-item">
+                <h2 class="ft-title">Stay Updated</h2>
+                <p>Subscribe to our newsletter to get our latest news.</p>
+                <form>
+                    <input type="email" name="email" placeholder="Enter email address">
+                    <input type="submit" value="Subscribe">
+                </form>
+            </div>
+        </section>
 
-                </li>
+        <!-- Footer social -->
+        <section class="ft-social">
+            <ul class="ft-social-list">
+                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                <li><a href="#"><i class="fa fa-github"></i></a></li>
+                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+            </ul>
+        </section>
 
-              </ul>
+    </footer>
 
-
-
-
-           
-
-          
-
-            
-            
-        </footer>
-    </div>
-</div> -->
 
 
 

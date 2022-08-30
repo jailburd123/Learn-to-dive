@@ -1,4 +1,4 @@
-// const { get } = require("request");
+
 
 
 
@@ -17,13 +17,17 @@ let cardinalDirection = (data) => {
     let direction = arr[(val % 16)];
     return direction;
 
-}   
-
-let query = `London`;  
-let weatherurl = `https://api.openweathermap.org/data/2.5/weather?q=${query}&APPID=fe2e25be076abfb7b948ebb4743d71d2`;
+}
 
 
-let getWeather = () => {
+let data1 = 'Omaha';
+
+
+let getWeather = (data) => {
+    let query = data;
+    let weatherurl = `https://api.openweathermap.org/data/2.5/weather?q=${query}&APPID=fe2e25be076abfb7b948ebb4743d71d2`;
+    console.log(weatherurl);
+
     fetch(weatherurl)
         .then((response) => {
             if (response.ok) {
@@ -34,7 +38,7 @@ let getWeather = () => {
         }).then((data) => {
             
             //log what comes back 
-            console.log(data);
+            // console.log(data);
 
             //variables 
             let country = data.sys.country;
@@ -60,11 +64,18 @@ let getWeather = () => {
 
 
             //write to our table
-            let tableData = document.querySelector('#weatherTable').innerHTML;
+            let tableData = document.getElementById('dataEntry').innerHTML;
+        document.getElementById("dataEntry").insertAdjacentHTML("afterend",
+            "<td>" + cityName  + "</td>" +
+                "<td>" + country  + "</td>" +
+                "<td>" + tempChange + "&deg;</td>" +
+                "<td>" + weatherdesc  + "</td>" +
+                "<td>" + windSpeed  + " MPH</td>" +
+                "<td>" + direction  + "</td>" +
+                "<td>" + humidity  + " %</td>"
+                );
 
-            
-            console.log('tableData querySelector: ', tableData);
-            console.log('button: ', getWeatherButton);
+
 
 
         //     <tr>
@@ -101,6 +112,11 @@ let getWeatherButton = document.querySelector('button');
 
 getWeatherButton.addEventListener("click", getWeather());
 
-getWeather();
 
+
+
+getWeatherDataValue = () => {
+ let data = document.getElementById('data').value;
+    getWeather(data);
+}
 

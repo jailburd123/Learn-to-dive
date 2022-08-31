@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Learn to Dive</title>
     <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="footer.css">
 </head>
 <body>
 
@@ -93,17 +94,49 @@
 
     <!-- footer -->
 
-    <div id="legal">
-        <footer>
-            <ul>
-                <li>&copy; 2022</li>
-                <li>Joshua Burden</li>
-                <li>AIM Institute</li>
-                <li><a href="mailto:jburden@aimcodeschool.org">Email me</a></li>
-                
-            </ol>
-        </footer>
-    </div>
+    <div class="container"></div>
+    <footer>
+        <!-- Footer main -->
+        <section class="ft-main">
+            <div class="ft-main-item">
+                <h2 class="ft-title">
+                    Contact Info
+                </h2>
+                <ul>
+                    <li>&copy; 2022</li>
+                    <li>Joshua Burden</li>
+                    <li>AIM Institute</li>
+                    <li><a href="mailto:jburden@aimcodeschool.org">Email me</a></li>                    
+                </ul>
+            </div>
+
+            <div class="ft-main-item">
+                <h2 class="ft-title">
+                    Stay Updated
+                </h2>
+                <p>Subscribe to our newsletter to get our latest news.</p>
+                <form>
+                    <input type="email" name="email" placeholder="Enter your email address">
+                    <input type="submit" value="Subscribe">
+                </form>
+            </div>
+        </section>
+
+        <section class="ft-social">
+            <ul class="ft-social-list">
+                <li><a href=""><i class="fa fa-facebook"></i></a></li>
+                <li><a href=""><i class="fa fa-twitter"></i></a></li>
+                <li><a href=""><i class="fa fa-instagram"></i></a></li>
+                <li><a href=""><i class="fa fa-github"></i></a></li>
+                <li><a href=""><i class="fa fa-linkedin"></i></a></li>
+                <li><a href=""><i class="fa fa-youtube"></i></a></li>
+            </ul>
+        </section>
+    </footer>
+        
+         
+        
     <script src="request.js"></script>
+    <script src="https://kit.fontawesome.com/dd7b6169e3.js" crossorigin="anonymous"></script>
 </body>
 </html>

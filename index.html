@@ -27,7 +27,7 @@
             <h1>Learn to Dive</h1>
         
                 <video width="100%" height="" autoplay muted loop id="divingVideo">
-                    <source src="./imgs/Pexels Videos 1456686.mp4" type="video/mp4">
+                    <source src="Scuba VIDEO-2022.mp4" type="video/mp4">
                     Your browser cannot play Video
                 </video>
             <!-- <img src="./imgs/pexels-pixabay-54306.jpg" alt="Old Navy Diver"> -->    
@@ -83,22 +83,57 @@
                     En route to the dive site, you will need to set up all your scuba gear. Take your time and double-check everything is working. If you are not sure about anything, don't be embarrassed – ask your guide or instructor.
                 </p>
 
-                <p>Sourced: <a href="https://www.worldnomads.com/travel-safety/worldwide/safe-scuba-diving">www.Worldnomads.com</a></p>
+                <p>Sourced: <a 
+                    id="sourcedLink"
+                    href="https://www.worldnomads.com/travel-safety/worldwide/safe-scuba-diving">www.Worldnomads.com</a></p>
                 </div>
                 </div>
             </article>
         </section>
     </div>
 
-    <!-- footer -->
+<!--WeatherData--->
 
+<section>   
+    <article>
+        <div class="article-container weatherData">
+
+        <div class="article-content">
+            <h2 class="article-title">
+                What is the weather like where we are diving?
+            </h2>
+            <div class="whereTo">
+                <label for ="data"></label>
+                <input type="text" id="data" placeholder="Enter your City, State/Country here..."> <span><button class="button" onclick="getWeatherDataValue()">Search</button></span> 
+               <!---table-->
+               <table id="weatherTable">
+                <tr>
+                    <th>City </th>
+                    <th>State/Country</th>
+                    <th>Tempeture</th>
+                    <th>Description</th>
+                    <th>Wind Speed</th>
+                    <th>Wind Direction</th>
+                    <th>Humidity</th>
+                </tr>
+                <tr id="dataEntry">
+
+                </tr>
+               </table>
+            </div>
+        </div>
+        </div>
+    </article>
+</section>
+
+    <!-- footer -->
     <div id="legal">
         <footer>
             <ul>
                 <li>&copy; 2022</li>
-                <li>Joshua Burden</li>
+                <li>Lucy Aguilar</li>
                 <li>AIM Institute</li>
-                <li><a href="mailto:jburden@aimcodeschool.org">Email me</a></li>
+                <li><a href="mailto:luceroaguilarc@gmail.com">Email me</a></li>
                 
             </ol>
         </footer>

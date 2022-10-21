@@ -111,6 +111,19 @@ section{
     padding: 25px;
 }
 
+#sourcedLink {
+    text-decoration: none;
+}
+#sourcedLink:hover{
+    text-decoration: none;
+    color: #880808
+}
+#sourcesLink:visited {
+text-decoration: none;
+
+}
+    
+
 /* legal */
 
 #legal{
@@ -125,4 +138,64 @@ section{
 #legal>footer>ul>li>a:hover{
     text-decoration: none;
     color: #ff0000;
+}
+/* Weather Data */
+.weatherData{
+    padding-top: 2rem ;
+    padding-bottom: 2rem ;
+}
+.weatherData>.article-content>.article-title{
+    text-align: center !important;
+}
+.weatherData>.article-content>.article-title>form {
+    text-align: center;
+}
+#WeatherForm {
+    justify-content: center;
+    text-align: center;
+
+}
+#weatherTable {
+    margin-top: 2rem;
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 2rem;
+}
+#weathertable td, #weatherTable th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+#weatherTable tr:nth-child(even){
+    background-color: #f2f2f2;
+
+}
+#weatherTable tr:hover {
+    background-color: #ddd;
+}
+#weatherTable th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: dodgerblue;
+    color: #fff
+}
+.whereTo {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+input[type="text"] {
+    border: 0;
+    width: 50%;
+    padding: 0.625rem;
+    margin-top: 0.3125rem;
+}
+.button {
+    font-size: 13pt;
+    color: #f1f1f1;
+    background-color: dodgerblue;
+    margin-left: 1rem;
+    height: 2.5rem;
+    width: 6rem;
 }
